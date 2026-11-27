@@ -1,0 +1,40 @@
+profile_version: 1
+investor:
+  investment_horizon_years_min: 20
+  monthly_contribution:
+    currency: SGD
+    minimum: 1000
+    maximum: 2000
+  acceptable_account_drawdown:
+    approximate_percent: 30
+    interpretation: "Investor-stated tolerance; not a forecast or guarantee that losses will be limited to this level."
+broker:
+  name: IBKR
+  access_mode: read_only
+  data_connection: flex_web_service_v3
+  account_identifiers: not_stored_in_repository
+investment_interests:
+  core_products:
+    - VWRA
+  comparison_products:
+    - CSPX
+    - VOO
+    - SPY
+    - VUAA
+  themes:
+    - global_equity
+    - sp500
+    - long_term_dca
+unknowns:
+  tax_residency: null
+  nationality: null
+  employment_income: null
+  household_liabilities: null
+  emergency_fund: null
+  near_term_liquidity_needs: null
+  investment_experience: null
+  other_assets: null
+  other_brokerage_accounts: null
+  strategic_asset_allocation: null
+  preferred_rebalancing_rule: null
+  notes: "Do not infer or fill unknowns without explicit investor confirmation."

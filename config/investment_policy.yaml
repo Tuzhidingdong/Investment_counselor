@@ -1,0 +1,33 @@
+policy_version: 1
+status: initial_profile_only
+objectives:
+  primary: "Long-term investing over at least 20 years."
+  monthly_contribution:
+    currency: SGD
+    minimum: 1000
+    maximum: 2000
+risk:
+  investor_stated_max_acceptable_drawdown_percent: 30
+  portfolio_risk_budget_status: not_yet_calibrated
+  target_volatility_percent: null
+  liquidity_reserve_target: null
+allocation:
+  target_allocation: null
+  permitted_assets: []
+  exclusions: []
+  rebalancing_method: null
+  rebalancing_bands: null
+  approval_note: "No allocation target or rebalancing rule is authorized until the investor explicitly approves it."
+operating_constraints:
+  broker_access: read_only
+  order_placement: prohibited
+  order_modification_or_cancellation: prohibited
+  money_movement: prohibited
+  margin_or_leverage_changes: prohibited
+  tax_advice: "Do not infer tax residency; flag when professional tax advice is required."
+recommendation_standard:
+  require_current_account_snapshot: true
+  require_dated_sources_for_current_market_facts: true
+  show_alternatives_and_tradeoffs: true
+  disclose_uncertainty_and_data_gaps: true
+  no_market_timing_from_single_event: true

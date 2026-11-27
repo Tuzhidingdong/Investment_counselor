@@ -1,0 +1,32 @@
+alert_rules_version: 1
+activation:
+  background_monitoring_enabled: false
+  note: "Thresholds are review prompts only until an external scheduler is configured and verified."
+data_quality:
+  require_fresh_account_snapshot: true
+  max_account_snapshot_age_hours_for_alert: 36
+  suppress_if_required_sections_missing: true
+portfolio_drawdown:
+  method: cash_flow_adjusted_total_return
+  thresholds_percent:
+    watch: 15
+    elevated: 20
+    high: 25
+    investor_tolerance_reference: 30
+  suppress_raw_nav_only: true
+allocation:
+  target_allocation_configured: false
+  deviation_threshold_percentage_points: null
+  action: "Do not issue allocation-drift alerts until an investor-approved target and bands exist."
+concentration:
+  single_security_threshold_percent: null
+  country_threshold_percent: null
+  sector_threshold_percent: null
+  action: "Report measured exposures when data supports them; do not invent personal limits."
+market_events:
+  review_triggers:
+    - "Material change to ETF domicile, index, fees, replication, distribution policy, or fund status"
+    - "Material change to the investor's stated goals or cash-flow needs"
+    - "Large market or FX moves that materially change the user's currency-aware portfolio value"
+    - "Material central-bank or government-bond yield changes relevant to held assets"
+  do_not_treat_as_trade_signal: true
