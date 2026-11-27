@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investment Counselor"
+  short_description: "Account-aware IBKR portfolio analysis and long-term investment guidance"
+  default_prompt: "Review my current IBKR portfolio and explain the risks, allocation, and investment options using my saved investment policy."

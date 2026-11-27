@@ -1,0 +1,16 @@
+# Broker credentials and local-only outputs
+.env
+.env.*
+!.env.example
+data/private/
+data/raw/
+data/portfolio_history/
+data/decision_history/
+*.flex.xml
+*_snapshot.json
+*_private.csv
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/

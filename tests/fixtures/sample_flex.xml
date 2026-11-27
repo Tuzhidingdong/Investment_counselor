@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexQueryResponse queryName="Counselor Test" type="AF">
+  <FlexStatements count="1">
+    <FlexStatement accountId="U1234567" fromDate="20261101" toDate="20261126" whenGenerated="2026-11-27T01:00:00">
+      <AccountInformation accountId="U1234567" currency="USD" />
+      <EquitySummaryInBase currency="USD" total="20689.87" totalLong="20689.87" />
+      <CashReport currency="SGD" endingCash="4145.40" />
+      <CashReport currency="USD" endingCash="100.00" />
+      <OpenPositions>
+        <OpenPosition assetCategory="STK" symbol="VWRA" position="68" positionValue="12351.52" currency="USD" markPrice="181.64" />
+        <OpenPosition assetCategory="STK" symbol="IB01" position="43" positionValue="5279.54" currency="USD" markPrice="122.78" />
+        <OpenPosition assetCategory="STK" symbol="TEST-SGD" position="2" positionValue="200.00" currency="SGD" />
+      </OpenPositions>
+      <Trades>
+        <Trade symbol="VWRA" quantity="2" tradePrice="181.00" currency="USD" tradeDate="2026-11-27" />
+      </Trades>
+      <CashTransactions>
+        <CashTransaction type="Deposits/Withdrawals" amount="4000.00" currency="SGD" dateTime="2026-11-26" />
+      </CashTransactions>
+    </FlexStatement>
+  </FlexStatements>
+</FlexQueryResponse>
