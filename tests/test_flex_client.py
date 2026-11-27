@@ -11,6 +11,11 @@ class FlexClientTests(unittest.TestCase):
         data = b'<FlexStatementResponse><Status>Success</Status><ReferenceCode>123456</ReferenceCode></FlexStatementResponse>'
         self.assertIsNone(_parse_service_error(data))
 
+    def test_transient_codes_cover_generation_and_pacing_errors(self):
+        from scripts.flex_sync import TRANSIENT_ERROR_CODES
+        self.assertTrue({"1003", "1004", "1005", "1006", "1007", "1008", "1009", "1018", "1019", "1021"}.issubset(TRANSIENT_ERROR_CODES))
+        self.assertNotIn("1012", TRANSIENT_ERROR_CODES)  # Expired token is not retryable.
+
 
 if __name__ == "__main__":
     unittest.main()

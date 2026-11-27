@@ -25,7 +25,7 @@ except ImportError:  # Support direct execution: python scripts/flex_sync.py
 
 BASE_URL = "https://ndcdyn.interactivebrokers.com/AccountManagement/FlexWebService"
 USER_AGENT = "InvestmentCounselor/0.1 Python-urllib"
-TRANSIENT_ERROR_CODES = {"1003", "1004", "1005", "1006", "1018"}
+TRANSIENT_ERROR_CODES = {"1003", "1004", "1005", "1006", "1007", "1008", "1009", "1018", "1019", "1021"}
 
 
 class FlexServiceError(RuntimeError):
